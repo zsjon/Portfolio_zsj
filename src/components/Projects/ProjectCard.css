@@ -1,0 +1,37 @@
+.project-card {
+    background: var(--color-card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-content {
+    padding: 16px;
+}
+
+.project-content h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.project-links a {
+    margin-right: 12px;
+    font-weight: bold;
+    color: var(--color-primary);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.project-links a:hover {
+    border-color: var(--color-primary);
+}

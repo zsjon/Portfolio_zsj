@@ -1,0 +1,15 @@
+.footer {
+    background: #0a192f;
+    text-align: center;
+    padding: 20px;
+    color: var(--color-subtext);
+}
+
+.footer .socials {
+    margin-top: 8px;
+}
+
+.footer .socials a {
+    margin: 0 10px;
+    color: var(--color-primary);
+}

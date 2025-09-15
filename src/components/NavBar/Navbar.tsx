@@ -5,11 +5,56 @@ export const Navbar = () => {
         <nav className="navbar">
             <div className="logo">ZSJ</div>
             <ul className="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button
+                        className="nav-link"
+                        onClick={() => {
+                            document.querySelector("#hero")?.scrollIntoView({behavior: "smooth"});
+                        }}
+                    >
+                        Home
+                    </button>
+                </li>
+                <li>
+                    <button
+                        className="nav-link"
+                        onClick={() => {
+                            document.querySelector("#about")?.scrollIntoView({behavior: "smooth"});
+                        }}
+                    >
+                        About
+                    </button>
+                </li>
+                <li>
+                    <button
+                        className="nav-link"
+                        onClick={() => {
+                            document.querySelector("#skills")?.scrollIntoView({behavior: "smooth"});
+                        }}
+                    >
+                        Skills
+                    </button>
+                </li>
+                <li>
+                    <button
+                        className="nav-link"
+                        onClick={() => {
+                            document.querySelector("#projects")?.scrollIntoView({behavior: "smooth"});
+                        }}
+                    >
+                        Projects
+                    </button>
+                </li>
+                <li>
+                    <button
+                        className="nav-link"
+                        onClick={() => {
+                            document.querySelector("#contact")?.scrollIntoView({behavior: "smooth"});
+                        }}
+                    >
+                        Contact
+                    </button>
+                </li>
             </ul>
         </nav>
     );

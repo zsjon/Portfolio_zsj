@@ -5,11 +5,10 @@ export const Contact = () => {
         <section id="contact" className="contact">
             <h2>Contact Me</h2>
             <p>
-                Interested in working together? Feel free to reach out via email or
-                social links below!
+                궁금한 점이 있거나 협업을 원하시면 아래의 링크를 통해 언제든지 연락 주세요!
             </p>
-            <a className="contact-btn" href="mailto:your.email@example.com">
-                Say Hello
+            <a className="contact-btn" href="mailto:cho010105@naver.com">
+                Say Hello 👋
             </a>
         </section>
     );

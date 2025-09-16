@@ -4,7 +4,7 @@ import "./Skills.css";
 export const Skills = () => {
     return (
         <section id="skills" className="skills">
-            <h2>Skills</h2>
+            <h2>저는 이런 기술을 사용해요!</h2>
             <div className="skills-grid">
                 {skills.map((s) => (
                     <div key={s.name} className="skill-card">

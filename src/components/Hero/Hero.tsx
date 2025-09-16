@@ -43,16 +43,20 @@ export const Hero = () => {
     return (
         <section className="hero" id="hero" ref={heroRef}>
             <div className="hero-content">
-                <p className="intro fade-up">Hi, my name is</p>
-                <h1 className="name fade-up">Your Name</h1>
-                <h2 className="tagline fade-up">I build things for the web.</h2>
+                <p className="intro fade-up">FrontEnd Developer</p>
+                <h1 className="name fade-up">안녕하세요, 조민성입니다.</h1>
+                <h2 className="tagline fade-up">함께 소통하고 쌓아나가는 것을 목표로 하는<br/>프론트엔드 개발자입니다.</h2>
                 <p className="description fade-up">
-                    I’m a software engineer specializing in building exceptional digital
-                    experiences.
+                    항상 사용자의 관점으로 생각하며, 더 나은 사용자 경험을 제공하기 위해 노력합니다.
                 </p>
-                <a href="#projects" className="hero-button fade-up">
+                <button
+                    className="hero-button fade-up"
+                    onClick={() => {
+                        document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
+                    }}
+                >
                     View My Work
-                </a>
+                </button>
             </div>
         </section>
     );

@@ -3,7 +3,7 @@ import "./Navbar.css";
 export const Navbar = () => {
     return (
         <nav className="navbar">
-            <div className="logo">ZSJ</div>
+            <div className="logo">Minseong's House</div>
             <ul className="nav-links">
                 <li>
                     <button

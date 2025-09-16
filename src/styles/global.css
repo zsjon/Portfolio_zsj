@@ -1,8 +1,11 @@
 :root {
     --color-primary: #1ea7fd;
-    --color-bg: #0a192f;
-    --color-text: #ccd6f6;
-    --color-subtext: #8892b0;
+    /*--color-bg: #0a192f;*/
+    --color-bg: #EFEFF1;
+    /*--color-text: #ccd6f6;*/
+    --color-text: #1F205F;
+    /*--color-subtext: #8892b0;*/
+    --color-subtext: #7B7B6E;
     --color-card-bg: #112240;
 }
 

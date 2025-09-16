@@ -23,10 +23,10 @@ export const ProjectCard = ({
                 <p>{description}</p>
                 <div className="project-links">
                     <a href={live} target="_blank" rel="noopener noreferrer">
-                        Live
+                        상세 보기
                     </a>
                     <a href={source} target="_blank" rel="noopener noreferrer">
-                        Code
+                        코드
                     </a>
                 </div>
             </div>

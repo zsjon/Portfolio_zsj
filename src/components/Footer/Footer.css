@@ -13,3 +13,23 @@
     margin: 0 10px;
     color: var(--color-primary);
 }
+.email-tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.email-tooltip {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0.95;
+    pointer-events: none;
+}

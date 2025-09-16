@@ -21,7 +21,11 @@
     }
 }
 
-.project-card {
-    will-change: transform, opacity;
-    opacity: 0;
+.project-card img {
+    max-width: 200px;
+    height: 200px;
+    display: block;
+    justify-content: center;
+    object-fit: cover;
+    border-radius: 8px;
 }

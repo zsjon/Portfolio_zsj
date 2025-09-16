@@ -4,8 +4,9 @@ type ProjectCardProps = {
     title: string;
     description: string;
     image: string;
-    live: string;
-    source: string;
+    live?: string;
+    source?: string;
+    notice?: string;
 };
 
 export const ProjectCard = ({
@@ -14,6 +15,7 @@ export const ProjectCard = ({
                                 image,
                                 live,
                                 source,
+                                notice,
                             }: ProjectCardProps) => {
     return (
         <div className="project-card">
@@ -21,14 +23,24 @@ export const ProjectCard = ({
             <div className="project-content">
                 <h3>{title}</h3>
                 <p>{description}</p>
+                {notice && (
+                    <p className="notice">
+                        {notice}
+                    </p>
+                )}
                 <div className="project-links">
-                    <a href={live} target="_blank" rel="noopener noreferrer">
-                        상세 보기
-                    </a>
-                    <a href={source} target="_blank" rel="noopener noreferrer">
-                        코드
-                    </a>
+                    {live && (
+                        <a href={live} target="_blank" rel="noopener noreferrer">
+                            Site
+                        </a>
+                    )}
+                    {source && (
+                        <a href={source} target="_blank" rel="noopener noreferrer">
+                            Code
+                        </a>
+                    )}
                 </div>
+
             </div>
         </div>
     );

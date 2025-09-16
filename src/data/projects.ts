@@ -1,7 +1,7 @@
 import vigilante from "../assets/image/projects/vigilante.png";
 import playus from "../assets/image/projects/PlayUs.png";
 import fourka from "../assets/image/projects/Fourka.png";
-import kicksco from "../assets/image/projects/KickSco.png";
+import kicksco from "../assets/image/projects/kickSco.png";
 import replaceImg from "../assets/image/projects/replace.png";
 
 export const projects = [

@@ -3,6 +3,7 @@ import playus from "../assets/image/projects/PlayUs.png";
 import fourka from "../assets/image/projects/Fourka.png";
 import kicksco from "../assets/image/projects/kicksco.png";
 import replaceImg from "../assets/image/projects/replace.png";
+import minseong from "../assets/image/profile/test2.png";
 
 export const projects = [
     {
@@ -61,5 +62,15 @@ export const projects = [
         live: "https://zsjon.github.io/kicksco_embedded_app/#/admin",
         source: "https://github.com/ISSRLab/CISCO_INNOVATION_CHALLENGE/tree/embedded_app_client",
         notice: "*Webex app에서 작동하며, 미배포로 현재 사용 불가능합니다.",
+    },
+    {
+        id: 6,
+        title: "Minseong's House",
+        description:
+            "포트폴리오 웹사이트입니다. React + Vite와 TypeScript를 사용하여 개발했으며" +
+            ", GSAP를 활용한 애니메이션 효과를 적용했습니다.",
+        image: minseong,
+        live: "https://github.com/zsjon/Portfolio_zsj",
+        source: "https://github.com/ISSRLab/CISCO_INNOVATION_CHALLENGE/tree/embedded_app_client",
     },
 ];

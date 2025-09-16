@@ -13,6 +13,12 @@
     transition: background 0.3s;
 }
 
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1F205F;
+}
+
 .contact-btn:hover {
     background: var(--color-primary);
     color: #fff;

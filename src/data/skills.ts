@@ -5,7 +5,7 @@ import nextjsIcon from "../assets/image/tech/Next.js.svg";
 import nodejsIcon from "../assets/image/tech/Node.js.svg";
 import mongoIcon from "../assets/image/tech/MongoDB.svg";
 import mysqlIcon from "../assets/image/tech/MySQL.svg";
-import neo4jIcon from "../assets/image/tech/Neo4J.svg";
+import neo4jIcon from "../assets/image/tech/Neo4j.svg";
 import html5Icon from "../assets/image/tech/HTML5.svg";
 import css3Icon from "../assets/image/tech/CSS3.svg";
 import bulmaIcon from "../assets/image/tech/Bulma.svg";
@@ -14,7 +14,8 @@ import figmaIcon from "../assets/image/tech/Figma.svg";
 import slackIcon from "../assets/image/tech/Slack.svg";
 import eslintIcon from "../assets/image/tech/ESLint.svg";
 import reduxIcon from "../assets/image/tech/Redux.svg";
-import webpackIcon from "../assets/image/tech/WebPack.svg";
+import webpackIcon from "../assets/image/tech/Webpack.svg";
+import gitIcon from "../assets/image/tech/Git.svg";
 
 export const skills = [
     { name: "React", icon: reactIcon },
@@ -34,5 +35,5 @@ export const skills = [
     { name: "ESLint", icon: eslintIcon },
     { name: "Redux", icon: reduxIcon },
     { name: "WebPack", icon: webpackIcon },
-
+    { name: "Git", icon: gitIcon },
 ];

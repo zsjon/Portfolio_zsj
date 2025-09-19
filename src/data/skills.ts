@@ -17,23 +17,25 @@ import reduxIcon from "../assets/image/tech/Redux.svg";
 import webpackIcon from "../assets/image/tech/Webpack.svg";
 import gitIcon from "../assets/image/tech/Git.svg";
 
+
+
 export const skills = [
-    { name: "React", icon: reactIcon },
-    { name: "TypeScript", icon: tsIcon },
-    { name: "JavaScript", icon: jsIcon },
-    { name: "Next.js", icon: nextjsIcon },
-    { name: "Node.js", icon: nodejsIcon },
-    { name: "MongoDB", icon: mongoIcon },
-    { name: "MySQL", icon: mysqlIcon },
-    { name: "Neo4J", icon: neo4jIcon },
-    { name: "HTML5", icon: html5Icon },
-    { name: "CSS3", icon: css3Icon },
-    { name: "Bulma", icon: bulmaIcon },
-    { name: "Springboot", icon: springbootIcon },
-    { name: "Figma", icon: figmaIcon },
-    { name: "Slack", icon: slackIcon },
-    { name: "ESLint", icon: eslintIcon },
-    { name: "Redux", icon: reduxIcon },
-    { name: "WebPack", icon: webpackIcon },
-    { name: "Git", icon: gitIcon },
+    { name: "React", icon: reactIcon, type: "FE" },
+    { name: "TypeScript", icon: tsIcon, type: "Language" },
+    { name: "JavaScript", icon: jsIcon, type: "Language" },
+    { name: "Next.js", icon: nextjsIcon, type: "FE" },
+    { name: "Node.js", icon: nodejsIcon, type: "FE" },
+    { name: "MongoDB", icon: mongoIcon, type: "DB" },
+    { name: "MySQL", icon: mysqlIcon, type: "DB" },
+    { name: "Neo4J", icon: neo4jIcon, type: "DB" },
+    { name: "HTML5", icon: html5Icon, type: "Language" },
+    { name: "CSS3", icon: css3Icon, type: "FE" },
+    { name: "Bulma", icon: bulmaIcon, type: "FE" },
+    { name: "Springboot", icon: springbootIcon, type: "BE" },
+    { name: "Figma", icon: figmaIcon, type: "Tools" },
+    { name: "Slack", icon: slackIcon, type: "Tools" },
+    { name: "ESLint", icon: eslintIcon, type: "FE" },
+    { name: "Redux", icon: reduxIcon, type: "FE" },
+    { name: "WebPack", icon: webpackIcon, type: "FE" },
+    { name: "Git", icon: gitIcon, type: "Tools" },
 ];

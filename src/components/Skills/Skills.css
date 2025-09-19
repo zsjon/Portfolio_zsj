@@ -13,19 +13,47 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 24px;
-    max-width: 600px;
     margin: 0 auto;
     color: #8892b0;
+    max-width: 600px;
 }
 
 .skill-card {
     background: var(--color-card-bg);
     padding: 20px;
     border-radius: 8px;
+    max-width: 190px;
 }
 
 .skill-icon {
     width: 40px;
     height: 40px;
     margin-bottom: 8px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 16px;
+}
+
+.tab-btn {
+    background: none;
+    border: 2px solid #1f205f;
+    color: #1f205f;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    background: #1f205f;
+    color: #fff;
+}
+
+.tab-btn.active {
+    background: #1f205f;
+    color: #fff;
 }

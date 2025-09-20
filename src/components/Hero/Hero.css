@@ -5,10 +5,13 @@
     height: 100vh;
     text-align: left;
     padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .hero-content {
     max-width: 800px;
+    width: 100%;
 }
 
 .intro, .name, .tagline, .description, .hero-button {
@@ -17,7 +20,8 @@
 
 .intro {
     color: var(--color-primary);
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+    line-height: 1.4;
 }
 
 .name {
@@ -51,4 +55,26 @@ a.hero-button, button.hero-button {
 a.hero-button:hover, button.hero-button:hover {
     background: var(--color-primary);
     color: #fff;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 16px;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .hero-content {
+    max-width: 100%;
+  }
+  .name {
+    font-size: 2rem;
+  }
+  .tagline {
+    font-size: 1.2rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
 }

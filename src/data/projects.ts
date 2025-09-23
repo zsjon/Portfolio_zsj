@@ -30,6 +30,7 @@ export const projects = [
         // live: "https://web.playus.o-r.kr/",
         source: "https://github.com/KEA-ChunSam/PlayUs-FE",
         notice: "*현재 Kakao Cloud 기간 만료로 인해 운영되지 않습니다.",
+        notionPageId: "2779eab5-8feb-80aa-9e10-f00360554b86",
     },
     {
         id: 3,
@@ -41,6 +42,7 @@ export const projects = [
         live: "https://msj9965.com/admin/login",
         // source: "https://github.com/yourname/ecommerce",
         notice: "*현재 Kakao Cloud 기간 만료로 인해 운영되지 않습니다.",
+        notionPageId: "2779eab5-8feb-80f1-80d1-f4532bb859ac",
     },
     {
         id: 4,
@@ -52,6 +54,7 @@ export const projects = [
         live: "https://zsjon.github.io/ddarreung/",
         source: "https://github.com/yourname/ecommerce",
         notice: "*현재 해커톤 종료로 인해 운영되지 않습니다.",
+        notionPageId: "2779eab5-8feb-80bb-9145-c475f66de21a",
     },
     {
         id: 5,
@@ -63,6 +66,7 @@ export const projects = [
         live: "https://zsjon.github.io/kicksco_embedded_app/#/admin",
         source: "https://github.com/ISSRLab/CISCO_INNOVATION_CHALLENGE/tree/embedded_app_client",
         notice: "*Webex app에서 작동하며, 미배포로 현재 사용 불가능합니다.",
+        notionPageId: "2779eab5-8feb-80ed-9552-d16d77cae1b0",
     },
     {
         id: 6,
@@ -73,5 +77,6 @@ export const projects = [
         image: minseong,
         live: "https://portfolio-zsj.vercel.app/",
         source: "https://github.com/zsjon/Portfolio_zsj",
+        notionPageId: "2779eab5-8feb-8007-adbd-c271acad1102",
     },
 ];

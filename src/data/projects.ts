@@ -17,7 +17,7 @@ export const projects = [
         // live: "http://metaverse.gachon.ac.kr/",
         source: "https://github.com/Gachon-Vigilante/Retriever_Frontend",
         notice: "*현재 Gachon Cloud 기간 만료로 인해 운영하지 않습니다.",
-        detail: ""
+        notionPageId: "2749eab5-8feb-8080-ac04-e2c1eecde64e",
     },
     {
         id: 2,

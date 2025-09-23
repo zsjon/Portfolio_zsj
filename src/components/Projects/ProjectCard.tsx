@@ -1,3 +1,4 @@
+// src/components/Projects/ProjectCard.tsx
 import "./ProjectCard.css";
 
 type ProjectCardProps = {
@@ -7,6 +8,7 @@ type ProjectCardProps = {
     live?: string;
     source?: string;
     notice?: string;
+    onDetail?: () => void;
 };
 
 export const ProjectCard = ({
@@ -16,6 +18,7 @@ export const ProjectCard = ({
                                 live,
                                 source,
                                 notice,
+                                onDetail,
                             }: ProjectCardProps) => {
     return (
         <div className="project-card">
@@ -23,11 +26,7 @@ export const ProjectCard = ({
             <div className="project-content">
                 <h3>{title}</h3>
                 <p>{description}</p>
-                {notice && (
-                    <p className="notice">
-                        {notice}
-                    </p>
-                )}
+                {notice && <p className="notice">{notice}</p>}
                 <div className="project-links">
                     {live && (
                         <a href={live} target="_blank" rel="noopener noreferrer">
@@ -39,8 +38,12 @@ export const ProjectCard = ({
                             Code
                         </a>
                     )}
+                    {onDetail && (
+                        <a href="#" onClick={e => { e.preventDefault(); onDetail(); }}>
+                            Detail
+                        </a>
+                    )}
                 </div>
-
             </div>
         </div>
     );

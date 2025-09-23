@@ -5,6 +5,8 @@ import { projects } from "../../data/projects";
 import { ProjectCard } from "./ProjectCard";
 import ProjectDetail from "./ProjectDetail";
 import "./Projects.css";
+import { createPortal } from "react-dom";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,6 +14,18 @@ export const Projects = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
     const [open, setOpen] = useState(false);
     const [notionPageId, setNotionPageId] = useState<string | null>(null);
+
+    const handleDetail = (pageId: string, _e: React.MouseEvent) => {
+        setNotionPageId(pageId);
+        setOpen(true);
+        document.body.style.overflow = "hidden";
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+        setNotionPageId(null);
+        document.body.style.overflow = "";
+    };
 
     useEffect(() => {
         if (sectionRef.current) {
@@ -36,15 +50,6 @@ export const Projects = () => {
         }
     }, []);
 
-    const handleDetail = (pageId: string) => {
-        setNotionPageId(pageId);
-        setOpen(true);
-    };
-
-    const handleClose = () => {
-        setOpen(false);
-        setNotionPageId(null);
-    };
 
     return (
         <section className="projects" id="projects" ref={sectionRef}>
@@ -54,18 +59,23 @@ export const Projects = () => {
                     <ProjectCard
                         key={p.id}
                         {...p}
-                        onDetail={p.notionPageId ? () => handleDetail(p.notionPageId!) : undefined}
+                        onDetail={p.notionPageId ? (e) => handleDetail(p.notionPageId!, e) : undefined}
                     />
                 ))}
             </div>
-            {open && notionPageId && (
-                <div className="modal-overlay" onClick={handleClose}>
-                    <div className="modal-content" onClick={e => e.stopPropagation()}>
-                        <button className="modal-close" onClick={handleClose}>X</button>
-                        <ProjectDetail notionPageId={notionPageId} />
-                    </div>
-                </div>
-            )}
+            {open && notionPageId &&
+                createPortal(
+                    <>
+                        <div className="modal-overlay" onClick={handleClose}>
+                            <div className="modal-content" onClick={e => e.stopPropagation()}>
+                                <button className="modal-close" onClick={handleClose}>X</button>
+                                <ProjectDetail notionPageId={notionPageId} />
+                            </div>
+                        </div>
+                    </>,
+                    document.body
+                )
+            }
         </section>
     );
 };

@@ -1,4 +1,3 @@
-// src/components/Projects/ProjectCard.tsx
 import "./ProjectCard.css";
 
 type ProjectCardProps = {
@@ -8,7 +7,7 @@ type ProjectCardProps = {
     live?: string;
     source?: string;
     notice?: string;
-    onDetail?: () => void;
+    onDetail?: (e: React.MouseEvent) => void;
 };
 
 export const ProjectCard = ({
@@ -39,7 +38,7 @@ export const ProjectCard = ({
                         </a>
                     )}
                     {onDetail && (
-                        <a href="#" onClick={e => { e.preventDefault(); onDetail(); }}>
+                        <a href="#" onClick={e => { e.preventDefault(); onDetail(e); }}>
                             Detail
                         </a>
                     )}

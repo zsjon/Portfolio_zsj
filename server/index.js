@@ -19,31 +19,6 @@ app.use(express.json());
 
 const notionApi = new NotionAPI();
 
-// const notion = new Client({ auth: process.env.NOTION_TOKEN });
-
-// app.get("/api/notion", async (req, res) => {
-//     try {
-//         const response = await notion.dataSources.query({
-//             data_source_id: process.env.NOTION_DATA_SOURCE_ID,
-//         });
-//         res.json(response);
-//     } catch (err) {
-//         console.error("에러 전체:", err);
-//         console.error("에러 body:", err.body);
-//         res.status(500).json({ error: "Notion Data Source 호출 실패" });
-//     }
-// });
-
-// app.get("/api/notion/page/:id", async (req, res) => {
-//     const pageId = req.params.id;
-//     try {
-//         const blocks = await notion.blocks.children.list({ block_id: pageId });
-//         res.json(blocks);
-//     } catch (err) {
-//         res.status(500).json({ error: "페이지 불러오기 실패" });
-//     }
-// });
-
 app.get("/api/notion/page/:id", async (req, res) => {
     try {
         const pageId = req.params.id;

@@ -1,9 +1,9 @@
-// ProjectDetail.tsx
 import { useEffect, useState } from "react";
 import { NotionRenderer } from "react-notion-x";
 import "react-notion-x/src/styles.css";
-import "prismjs/themes/prism.css"; // 코드 블럭용
+import "prismjs/themes/prism.css";
 import "katex/dist/katex.min.css";
+import "./ProjectDetail.css";
 
 function ProjectDetail({ notionPageId }: { notionPageId: string }) {
     const [recordMap, setRecordMap] = useState<any>(null);

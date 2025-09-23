@@ -6,7 +6,14 @@ import { Client } from "@notionhq/client";
 
 dotenv.config();
 const app = express();
-app.use(cors({ origin: "https://portfolio-zsj.vercel.app/" }));
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "https://portfolio-zsj.vercel.app",
+  ],
+  credentials: true,
+}));
 app.use(express.json());
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });

@@ -16,7 +16,9 @@ app.use(cors({
 }));
 app.use(express.json());
 
-const notion = new Client({ auth: process.env.NOTION_TOKEN });
+const notionApi = new NotionAPI();
+
+// const notion = new Client({ auth: process.env.NOTION_TOKEN });
 
 // app.get("/api/notion", async (req, res) => {
 //     try {
@@ -31,13 +33,24 @@ const notion = new Client({ auth: process.env.NOTION_TOKEN });
 //     }
 // });
 
+// app.get("/api/notion/page/:id", async (req, res) => {
+//     const pageId = req.params.id;
+//     try {
+//         const blocks = await notion.blocks.children.list({ block_id: pageId });
+//         res.json(blocks);
+//     } catch (err) {
+//         res.status(500).json({ error: "페이지 불러오기 실패" });
+//     }
+// });
+
 app.get("/api/notion/page/:id", async (req, res) => {
-    const pageId = req.params.id;
     try {
-        const blocks = await notion.blocks.children.list({ block_id: pageId });
-        res.json(blocks);
+        const pageId = req.params.id;
+        const recordMap = await notionApi.getPage(pageId);
+        res.json(recordMap);
     } catch (err) {
-        res.status(500).json({ error: "페이지 불러오기 실패" });
+        console.error(" Notion 페이지 로드 실패:", err);
+        res.status(500).json({ error: "Notion 페이지 로드 실패" });
     }
 });
 

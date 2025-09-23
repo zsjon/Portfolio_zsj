@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { Client } from "@notionhq/client";
+import { NotionAPI } from "notion-client";
 
 dotenv.config();
 const app = express();

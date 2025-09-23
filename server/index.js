@@ -18,6 +18,8 @@ app.get("/api/notion", async (req, res) => {
         });
         res.json(response);
     } catch (err) {
+        console.error("에러 전체:", err);
+        console.error("에러 body:", err.body);
         res.status(500).json({ error: "Notion API 호출 실패" });
     }
 });

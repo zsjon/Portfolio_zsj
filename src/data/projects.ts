@@ -17,6 +17,7 @@ export const projects = [
         // live: "http://metaverse.gachon.ac.kr/",
         source: "https://github.com/Gachon-Vigilante/Retriever_Frontend",
         notice: "*현재 Gachon Cloud 기간 만료로 인해 운영하지 않습니다.",
+        detail: ""
     },
     {
         id: 2,
@@ -70,7 +71,7 @@ export const projects = [
             "포트폴리오 웹사이트입니다. React + Vite와 TypeScript를 사용하여 개발했으며" +
             ", GSAP를 활용한 애니메이션 효과를 적용했습니다.",
         image: minseong,
-        live: "https://github.com/zsjon/Portfolio_zsj",
-        source: "https://github.com/ISSRLab/CISCO_INNOVATION_CHALLENGE/tree/embedded_app_client",
+        live: "https://portfolio-zsj.vercel.app/",
+        source: "https://github.com/zsjon/Portfolio_zsj",
     },
 ];

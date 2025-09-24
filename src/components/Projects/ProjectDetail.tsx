@@ -20,7 +20,7 @@ function ProjectDetail({ notionPageId }: { notionPageId: string }) {
 
     return (
         <div className="notion-page">
-            <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={false} />
+            <NotionRenderer recordMap={recordMap} fullPage={false} darkMode={false} />
         </div>
     );
 }

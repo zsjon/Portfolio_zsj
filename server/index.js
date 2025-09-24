@@ -20,6 +20,12 @@ app.use(express.json());
 
 const notionApi = new NotionAPI();
 
+// alb health check용
+app.get("/", (req, res) => {
+    res.status(200).send("ok");
+});
+
+// Notion 페이지 데이터 가져오는 용
 app.get("/api/notion/page/:id", async (req, res) => {
     try {
         const pageId = req.params.id;

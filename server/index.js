@@ -3,17 +3,18 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 // import { Client } from "@notionhq/client";
-import { NotionAPI } from "notion-client";
+import {NotionAPI} from "notion-client";
 
 dotenv.config();
 const app = express();
 app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "http://localhost:3000",
-    "https://portfolio-zsj.vercel.app",
-  ],
-  credentials: true,
+    origin: [
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "https://portfolio-zsj.vercel.app",
+        "https://zsj-portfolio.o-r.kr",
+    ],
+    credentials: true,
 }));
 app.use(express.json());
 
@@ -26,7 +27,7 @@ app.get("/api/notion/page/:id", async (req, res) => {
         res.json(recordMap);
     } catch (err) {
         console.error(" Notion 페이지 로드 실패:", err);
-        res.status(500).json({ error: "Notion 페이지 로드 실패" });
+        res.status(500).json({error: "Notion 페이지 로드 실패"});
     }
 });
 

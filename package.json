@@ -30,6 +30,7 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
     "@notionhq/client": "^5.1.0",
     "@storybook/react": "^9.1.6",
     "@testing-library/jest-dom": "^6.8.0",

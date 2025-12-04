@@ -1,4 +1,5 @@
 import "./Navbar.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export const Navbar = () => {
     return (
@@ -56,6 +57,9 @@ export const Navbar = () => {
                     </button>
                 </li>
             </ul>
+            <div className="theme">
+                <i className="fa-regular fa-moon"></i>
+            </div>
         </nav>
     );
 };

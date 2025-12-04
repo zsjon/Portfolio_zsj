@@ -1,11 +1,18 @@
 import "./Navbar.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import {useEffect} from "react";
-import {initialTheme, toggleTheme} from "../../utils/Theme.tsx";
+import {useEffect, useState} from "react";
+import {toggleTheme} from "../../utils/Theme.tsx";
 
 export const Navbar = () => {
+    const [theme, setTheme] = useState("light");
     useEffect(() => {
-        initialTheme();
+        const updateTheme = () => {
+            const isDark = document.documentElement.classList.contains("dark") || document.documentElement.classList.contains("dark-from-html");
+            setTheme(isDark ? "dark" : "light");
+        };
+        updateTheme();
+        window.addEventListener("theme-change", updateTheme);
+        return () => {window.removeEventListener("theme-change", updateTheme);}
     }, []);
     return (
         <nav className="navbar">
@@ -63,7 +70,8 @@ export const Navbar = () => {
                 </li>
             </ul>
             <div className="theme">
-                <i className="fa-regular fa-moon" onClick={toggleTheme}></i>
+                <i className={theme === "dark" ? "fa-regular fa-sun" : "fa-regular fa-moon"}
+                   onClick={toggleTheme}></i>
             </div>
         </nav>
     );

@@ -1,7 +1,12 @@
 import "./Navbar.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import {useEffect} from "react";
+import {initialTheme, toggleTheme} from "../../utils/Theme.tsx";
 
 export const Navbar = () => {
+    useEffect(() => {
+        initialTheme();
+    }, []);
     return (
         <nav className="navbar">
             <div className="logo">Minseong's House</div>
@@ -58,7 +63,7 @@ export const Navbar = () => {
                 </li>
             </ul>
             <div className="theme">
-                <i className="fa-regular fa-moon"></i>
+                <i className="fa-regular fa-moon" onClick={toggleTheme}></i>
             </div>
         </nav>
     );

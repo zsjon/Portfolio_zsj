@@ -16,7 +16,7 @@
 .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #1F205F;
+    color: var(--color-card-bg);
 }
 
 .contact-btn:hover {

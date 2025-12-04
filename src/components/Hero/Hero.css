@@ -27,7 +27,7 @@
 .name {
     font-size: 3rem;
     margin: 0.2em 0;
-    color: #1F205F;
+    color: var(--color-card-bg);
 }
 
 .tagline {
